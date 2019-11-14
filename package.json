@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf .cache build dist",
-    "build": "cross-env NODE_ENV=production parcel build index.html --no-source-maps --no-cache --public-url https://loganpowell.github.io/styled-system-hdom-ex/",
+    "build": "npm run clean && cross-env NODE_ENV=production parcel build index.html --no-source-maps --no-cache --public-url ./",
     "start": "npm run clean && parcel index.html --global md -p 8080 --open -d dist watch"
   },
   "repository": {
