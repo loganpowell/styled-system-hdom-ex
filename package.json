@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf .cache build dist",
+    "build": "npm run clean && parcel build index.html -d dist --no-source-maps --no-cache --detailed-report --public-url /styled-system-hdom-ex/",
     "start": "npm run clean && parcel index.html --global md -p 8080 --open -d dist watch"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "dependencies": {
     "@thi.ng/hdom": "^9.0.0-alpha1",
     "styled-system-hdom": "latest"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }
